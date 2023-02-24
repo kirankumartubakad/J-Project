@@ -1,2 +1,6 @@
-FROM tomcat9
-RUN /target/*.war /usr/local/tomcat/webapps/wwp-1.0.0.war
+# Pull base image 
+From tomcat:8-jre8 
+
+# Maintainer 
+MAINTAINER "valaxytech@gmail.com" 
+COPY ./webapp.war /usr/local/tomcat/webapps
